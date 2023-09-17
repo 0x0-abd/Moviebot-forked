@@ -4,15 +4,15 @@ from langchain.chat_models import ChatOpenAI
 from langchain.agents.agent_types import AgentType
 from langchain.llms import OpenAI
 from dotenv import load_dotenv
-import openai
+import os
+
 
 def main():
     load_dotenv()
-    
     st.set_page_config(page_title="Hello, I am a Movie Chatbot. Ask me anything?")
     st.header("Hello, I am a Movie Chatbot. Ask me anything?")
     user_csv = "actors.csv"
-    OPENAI_API_KEY=st.text_input("Enter your OpenAI API key.")
+    os.environ["OPENAI_API_KEY"] =st.text_input("Enter your OpenAI API")
     #user_question = input("Ask a question about your CSV ?")
     user_question=st.text_input("Ask me a question about movies?")
     
