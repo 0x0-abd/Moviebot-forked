@@ -1,1 +1,1 @@
-console.log("boo")
+console.log("less scary boo")
